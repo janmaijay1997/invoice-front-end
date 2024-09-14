@@ -7,6 +7,9 @@ import { LoginComponent } from './auth/login/login.component';
 import { DashboardComponent } from './main/dashboard/dashboard.component';
 import { UserManagmentComponent } from './main/user-managment/user-managment.component';
 import { AddUserComponent } from './main/add-user/add-user.component';
+import { SidebarComponent } from './helper/sidebar/sidebar.component';
+import { ViewInvoiceComponent } from './main/view-invoice/view-invoice.component';
+import { AddInvoiceComponent } from './main/add-invoice/add-invoice.component';
 // import { SidebarModule } from 'primeng/sidebar';
 // import { ButtonModule } from 'primeng/button';
 // import { TreeModule } from 'primeng/tree';
@@ -17,7 +20,10 @@ import { AddUserComponent } from './main/add-user/add-user.component';
     LoginComponent,
     DashboardComponent,
     UserManagmentComponent,
-    AddUserComponent
+    AddUserComponent,
+    SidebarComponent,
+    ViewInvoiceComponent,
+    AddInvoiceComponent
   ],
   imports: [
     BrowserModule,
