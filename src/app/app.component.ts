@@ -10,9 +10,10 @@ export class AppComponent {
 
   sidebarActive: boolean = true;
   menuItems: any[] = [
-    { label: 'Item 1', submenu: ['Subitem 1-1', 'Subitem 1-2'], active: false },
-    { label: 'Item 2', submenu: ['Subitem 2-1', 'Subitem 2-2'], active: false },
-    { label: 'Item 3', submenu: [], active: false }
+    { label: 'Dashboard', submenu: [], active: false },
+    { label: 'User Managment', submenu: ['Add User', 'View User'], active: false },
+    { label: 'Add invoice', submenu: [], active: false },
+    { label: 'View invoice', submenu: [], active: false }
   ];
   submenuActive: boolean[] = [];
   activeMenuIndex: number | null = null;
