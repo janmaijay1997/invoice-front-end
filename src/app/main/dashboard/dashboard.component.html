@@ -1,3 +1,121 @@
-<div   class="dashboardMain"  >
-  lorem Imspusn
+<app-sidebar></app-sidebar>
+<div class="mainPortion" [class.sidebar-open]="sidebarActive">
+  <div class="dashboard-container">
+    <h1>Dashboard</h1>
+
+    <!-- Invoice Summary Section -->
+    <mat-card class="section-card">
+      <mat-card-header>
+        <mat-card-title>
+          <mat-icon>receipt</mat-icon> Invoice Summary
+        </mat-card-title>
+        <mat-card-subtitle>
+          Year to Date
+          <button mat-icon-button>
+            <mat-icon>arrow_drop_down</mat-icon>
+          </button>
+        </mat-card-subtitle>
+      </mat-card-header>
+
+      <div class="summary-grid">
+        <!-- Draft Invoices -->
+        <mat-card class="summary-card draft-invoices">
+          <mat-card-title>Draft Invoices</mat-card-title>
+          <h2>$0</h2>
+          <a mat-button color="primary">View Draft Invoices</a>
+        </mat-card>
+
+        <!-- Sent Invoices -->
+        <mat-card class="summary-card sent-invoices">
+          <mat-card-title>Sent Invoices</mat-card-title>
+          <h2>$0</h2>
+          <a mat-button color="primary">View Sent Invoices</a>
+        </mat-card>
+
+        <!-- Overdue Invoices -->
+        <mat-card class="summary-card overdue-invoices">
+          <mat-card-title>Overdue Invoices</mat-card-title>
+          <h2>$0</h2>
+          <a mat-button color="primary">View Overdue Invoices</a>
+        </mat-card>
+
+        <!-- Payments Collected -->
+        <mat-card class="summary-card payments-collected">
+          <mat-card-title>Payments Collected</mat-card-title>
+          <h2>$0</h2>
+          <a mat-button color="primary">View Payments</a>
+        </mat-card>
+      </div>
+    </mat-card>
+
+    <!-- Quote Summary Section -->
+    <mat-card class="section-card">
+      <mat-card-header>
+        <mat-card-title>
+          <mat-icon>description</mat-icon> Quote Summary
+        </mat-card-title>
+        <mat-card-subtitle>
+          This Quarter
+          <button mat-icon-button>
+            <mat-icon>settings</mat-icon>
+          </button>
+        </mat-card-subtitle>
+      </mat-card-header>
+
+      <div class="summary-grid">
+        <!-- Draft Quotes -->
+        <mat-card class="summary-card draft-quotes">
+          <mat-card-title>Draft Quotes</mat-card-title>
+          <h2>$0</h2>
+          <a mat-button color="primary">View Draft Quotes</a>
+        </mat-card>
+
+        <!-- Sent Quotes -->
+        <mat-card class="summary-card sent-quotes">
+          <mat-card-title>Sent Quotes</mat-card-title>
+          <h2>$0</h2>
+          <a mat-button color="primary">View Sent Quotes</a>
+        </mat-card>
+
+        <!-- Rejected Quotes -->
+        <mat-card class="summary-card rejected-quotes">
+          <mat-card-title>Rejected Quotes</mat-card-title>
+          <h2>$0</h2>
+          <a mat-button color="primary">View Rejected Quotes</a>
+        </mat-card>
+
+        <!-- Approved Quotes -->
+        <mat-card class="summary-card approved-quotes">
+          <mat-card-title>Approved Quotes</mat-card-title>
+          <h2>$0</h2>
+          <a mat-button color="primary">View Approved Quotes</a>
+        </mat-card>
+      </div>
+    </mat-card>
+
+    <!-- Recent Client Activity -->
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          <mat-icon>history</mat-icon> Recent Client Activity
+        </mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content>
+        <table mat-table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Activity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>No activity yet</td>
+            </tr>
+          </tbody>
+        </table>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>

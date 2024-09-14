@@ -1,0 +1,73 @@
+.sidenav-container {
+    height: 100vh;
+    background-color: #2e3b4e;
+}
+
+.mat-list-item.active,
+.mat-list-item:hover {
+    background-color: #1e88e5 !important;
+    color: white;
+}
+
+.mat-list-item.active span,
+.mat-list-item:hover span {
+    font-weight: bold;
+    color: white;
+}
+
+/* Default icon color */
+.mat-list-item mat-icon {
+    color: #90a4ae;
+}
+
+/* Active submenu */
+mat-expansion-panel .mat-list-item.active {
+    background-color: #2196f3 !important;
+}
+
+mat-sidenav {
+    width: 250px;
+    background-color: #333;
+    color: white;
+}
+
+mat-list-item {
+    color: white;
+}
+
+mat-icon {
+    margin-right: 10px;
+}
+
+.active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+mat-expansion-panel-header {
+    color: white;
+}
+
+mat-expansion-panel {
+    background-color: #444;
+    color: white;
+}
+
+.mat-sidenav-content {
+    padding: 20px;
+}
+
+.main-content {
+    padding: 20px;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+}
+
+.mat-expansion-panel-header.mat-expanded {
+    background-color: #1e88e5;
+    color: white;
+}
+
+.mat-expansion-panel-header:hover {
+    background-color: #1e88e5;
+    color: white;
+}
