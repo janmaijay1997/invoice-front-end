@@ -7,42 +7,32 @@ import { Component, HostListener } from '@angular/core';
 })
 export class AppComponent {
   title = 'invoiceWeb';
-   
-   // Sidebar visibility state
-   isCollapsed = false;
 
-   // Mobile view flag
-   isMobileView = false;
- 
-   // Track which submenu is visible
-   submenuVisibility :any= {
-     home: false,
-     services: false,
-     clients: false
-   };
- 
-   constructor() {
-     this.checkScreenSize();
-   }
- 
-   // Method to toggle sidebar visibility
-   toggleSidebar() {
-     this.isCollapsed = !this.isCollapsed;
-   }
- 
-   // Method to toggle submenus
-   toggleSubmenu(menu: string) {
-     this.submenuVisibility[menu] = !this.submenuVisibility[menu];
-   }
- 
-   // Listen to screen size changes
-   @HostListener('window:resize', ['$event'])
-   onResize(event: Event) {
-     this.checkScreenSize();
-   }
- 
-   // Check if it's mobile view (small screens)
-   checkScreenSize() {
-     this.isMobileView = window.innerWidth <= 768;
-   }
+  sidebarActive: boolean = true;
+  menuItems: any[] = [
+    { label: 'Item 1', submenu: ['Subitem 1-1', 'Subitem 1-2'], active: false },
+    { label: 'Item 2', submenu: ['Subitem 2-1', 'Subitem 2-2'], active: false },
+    { label: 'Item 3', submenu: [], active: false }
+  ];
+  submenuActive: boolean[] = [];
+  activeMenuIndex: number | null = null;
+  activeSubmenuIndex: number | null = null;
+
+  toggleSidebar() {
+    this.sidebarActive = !this.sidebarActive;
+  }
+
+  toggleSubmenu(index: number) {
+    this.submenuActive[index] = !this.submenuActive[index];
+  }
+
+  setActiveMenuItem(index: number) {
+    this.activeMenuIndex = index;
+    this.activeSubmenuIndex = null; // Reset submenu selection if a new menu is clicked
+  }
+
+  setActiveSubmenuItem(menuIndex: number, subIndex: number) {
+    this.activeMenuIndex = menuIndex;
+    this.activeSubmenuIndex = subIndex;
+  }
 }
