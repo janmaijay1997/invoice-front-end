@@ -15,7 +15,7 @@
 <div class="sidebar" [class.active]="sidebarActive" id="sidebar">
   <ul>
     <li *ngFor="let item of menuItems; let i = index" [ngClass]="{'active-menu-item': item.active}"
-      (click)="setActiveMenuItem(i)">
+      (click)="setActiveMenuItem(i , item)">
       <span (click)="item.submenu.length ? toggleSubmenu(i) : null">{{ item.label }}</span>
 
       <!-- Submenu -->
@@ -27,5 +27,6 @@
 </div>
 
 <div class="mainPortion" [class.sidebar-open]="sidebarActive">
-  <app-dashboard></app-dashboard>
+  <app-dashboard *ngIf="selectedVal === 'Dashboard'"></app-dashboard>
+  <app-user-managment *ngIf="selectedVal === 'View User'"></app-user-managment>
 </div>
