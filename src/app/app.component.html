@@ -1,1 +1,32 @@
-<app-login> </app-login>
+<!-- app.component.html -->
+<div>
+  <!-- Sidebar Toggle Button (visible on mobile) -->
+  <button class="toggle-btn" (click)="toggleSidebar()">☰</button>
+</div>
+
+<div [ngClass]="{'collapsed': isCollapsed, 'mobile-view': isMobileView}" class="sidebar">
+  <a (click)="toggleSubmenu('home')">Home</a>
+  <div *ngIf="submenuVisibility.home" class="submenu">
+    <a href="#home-overview">Overview</a>
+    <a href="#home-details">Details</a>
+  </div>
+
+  <a (click)="toggleSubmenu('services')">Services</a>
+  <div *ngIf="submenuVisibility.services" class="submenu">
+    <a href="#web-development">Web Development</a>
+    <a href="#mobile-development">Mobile Development</a>
+  </div>
+
+  <a (click)="toggleSubmenu('clients')">Clients</a>
+  <div *ngIf="submenuVisibility.clients" class="submenu">
+    <a href="#client-a">Client A</a>
+    <a href="#client-b">Client B</a>
+  </div>
+
+  <a href="#contact">Contact</a>
+</div>
+
+<div class="content" [ngClass]="{'full-width': isCollapsed}">
+  <h1>Welcome to the Dashboard</h1>
+  <!-- Additional content goes here -->
+</div>
