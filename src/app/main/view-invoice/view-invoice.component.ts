@@ -19,12 +19,19 @@ export class ViewInvoiceComponent implements OnInit {
     this.sidebarService.sidebarActive$.subscribe((state: any) => {
       console.log(state, "dd");
 
- 
+
       // else {
       //   this.sidebarActive = false;
       // }
     });
 
   } users: any = [];
+  invoices: any = []
+  isAdmin: any;
+  editInvoice(val: any) {
 
+  }
+  viewInvoice(val: any) {
+
+  }
 }

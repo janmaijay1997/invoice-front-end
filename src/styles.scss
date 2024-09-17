@@ -29,7 +29,12 @@ h2 {
 /* Forms */
 form {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+
+    button {
+        margin-left: 10px;
+    }
+
 }
 
 form label {
