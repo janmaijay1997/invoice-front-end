@@ -11,11 +11,15 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     // Subscribe to the sidebar active state
+    let flage = localStorage.getItem("lastname");
 
     this.sidebarService.sidebarActive$.subscribe((state: any) => {
       console.log(state);
 
       this.sidebarActive = !state;
+      // if (flage) {
+      //   this.sidebarActive = true;
+      // }
     });
   }
 

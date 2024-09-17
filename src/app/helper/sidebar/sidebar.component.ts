@@ -32,6 +32,9 @@ export class SidebarComponent implements OnInit {
   toggleSidebar() {
     this.sidebarService.toggleSidebar(); // Use the service to toggle
     this.topggelFlage = !this.topggelFlage;
+    // localStorage.setItem('topggelFlage',)
+    localStorage.setItem("lastname", `${this.topggelFlage}`);
+
   }
 
   toggleSubmenu(index: number) {
@@ -65,10 +68,7 @@ export class SidebarComponent implements OnInit {
 
     }
     else if (val.label == 'Add invoice') {
-
       this.router.navigate(['/addInvoice']);
-
-
     }
   }
 

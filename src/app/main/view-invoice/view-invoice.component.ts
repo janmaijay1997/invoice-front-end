@@ -9,13 +9,22 @@ import { SidebarService } from 'src/app/services/sidebar.service';
 export class ViewInvoiceComponent implements OnInit {
   constructor(private sidebarService: SidebarService) { }
 
-  sidebarActive: boolean = false;
+  sidebarActive: boolean = true;
   ngOnInit() {
     // Subscribe to the sidebar active state
+    console.log(localStorage.getItem("lastname"));
+    let flage = localStorage.getItem("lastname");
+
+
     this.sidebarService.sidebarActive$.subscribe((state: any) => {
-      this.sidebarActive = state;
+      console.log(state, "dd");
+
+ 
+      // else {
+      //   this.sidebarActive = false;
+      // }
     });
 
   } users: any = [];
-  
+
 }

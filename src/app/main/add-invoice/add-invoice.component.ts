@@ -13,8 +13,13 @@ export class AddInvoiceComponent implements OnInit {
   sidebarActive: boolean = false;
   ngOnInit() {
     // Subscribe to the sidebar active state
+    let flage = localStorage.getItem("lastname");
+
     this.sidebarService.sidebarActive$.subscribe((state: any) => {
       this.sidebarActive = !state;
+      if (flage) {
+        this.sidebarActive = true;
+      }
     });
 
   } users: any = [];
