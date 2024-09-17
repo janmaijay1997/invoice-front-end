@@ -1,6 +1,25 @@
 <app-sidebar></app-sidebar>
-<div class="mainPortion" [class.sidebar-open]="sidebarActive"> 
-    <div class="dashboardMain">
-        add  invoice
+<div class="mainPortion" [class.sidebar-open]="sidebarActive">
+  <div class="dashboardMain">
+    <h2>Invoices / Create</h2>
+  </div>
+  <div class="create-invoice-container">
+
+
+    <mat-card>
+      <mat-card-title>Invoice Details</mat-card-title>
+      <mat-card-content>
+  
+       
+        </mat-card-content>
+        </mat-card>
+      
+
+    <!-- Footer actions for the invoice -->
+    <div class="invoice-actions">
+      <button mat-raised-button color="primary">Save Draft</button>
+      <button mat-raised-button color="accent">Mark Sent</button>
+      <button mat-raised-button color="warn">Email Invoice</button>
     </div>
+  </div>
 </div>

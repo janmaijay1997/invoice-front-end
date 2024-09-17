@@ -1,0 +1,44 @@
+.invoice-create-container {
+    padding: 20px;
+  }
+  
+  .invoice-card, 
+  .invoice-items-card, 
+  .invoice-notes-card, 
+  .invoice-summary-card {
+    margin-bottom: 20px;
+  }
+  
+  .mat-form-field {
+    width: 100%;
+  }
+  
+  .create-new-client-link {
+    display: inline-block;
+    margin-top: 8px;
+  }
+  
+  .add-item-button {
+    margin-top: 10px;
+  }
+  
+  .invoice-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 100px;
+  }
+  .create-invoice-container {
+    padding: 20px;
+  }
+  
+  .invoice-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  

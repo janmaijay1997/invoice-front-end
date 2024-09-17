@@ -76,7 +76,7 @@ export class SidebarComponent implements OnInit {
     }
     else if (val.label == 'View invoice') {
 
-      this.router.navigate(['/InvoiceView']);
+      this.router.navigate(['/invoices/view']);
 
 
     }
