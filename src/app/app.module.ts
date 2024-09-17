@@ -10,6 +10,7 @@ import { AddUserComponent } from './main/add-user/add-user.component';
 import { SidebarComponent } from './helper/sidebar/sidebar.component';
 import { ViewInvoiceComponent } from './main/view-invoice/view-invoice.component';
 import { AddInvoiceComponent } from './main/add-invoice/add-invoice.component';
+import { HeaderComponent } from './helper/sidebar/header/header.component';
 // import {TableModule} from 'primeng/table';
 
  
@@ -26,7 +27,8 @@ import { AddInvoiceComponent } from './main/add-invoice/add-invoice.component';
     AddUserComponent,
     SidebarComponent,
     ViewInvoiceComponent,
-    AddInvoiceComponent
+    AddInvoiceComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

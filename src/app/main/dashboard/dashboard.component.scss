@@ -179,6 +179,9 @@ body {
   // width: 100%;
   // height: calc(100vh - 95px);
   padding: 10px;
+  overflow: scroll;
+  height: calc(100vh - 100px);
+
   box-sizing: border-box;
 }
 
