@@ -29,12 +29,23 @@ h2 {
 /* Forms */
 form {
     display: flex;
+    flex-direction: column;
+     
+}
+// flex-direction: row;
+
+//     button {
+//         margin-left: 10px;
+//     }
+
+.invoice_form{
+    
+    display: flex;
     flex-direction: row;
-
-    button {
-        margin-left: 10px;
-    }
-
+    
+        button {
+            margin-left: 10px;
+        }
 }
 
 form label {
