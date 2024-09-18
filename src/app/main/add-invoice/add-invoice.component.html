@@ -6,26 +6,38 @@
         <!-- create-invoice.component.html -->
         <div class="invoice-container">
             <h2>Create Invoice</h2>
-            <form>
-                <label for="client">Client Name</label>
-                <input type="text" id="client" placeholder="Enter client name">
-
-                <label for="invoiceDate">Invoice Date</label>
-                <input type="date" id="invoiceDate">
-
-                <label for="item">Add Item</label>
-                <div class="item-list">
-                    <select id="item">
-                        <option value="service1">Service 1</option>
-                        <option value="service2">Service 2</option>
-                    </select>
-                    <input type="number" placeholder="Quantity">
-                    <input type="number" placeholder="Price">
+            <form [formGroup]="invoiceForm" (ngSubmit)="onSubmit()">
+                <div>
+                    <label for="client">Client Name</label>
+                    <input type="text" id="client" formControlName="client" placeholder="Enter client name">
                 </div>
 
-                <div class="subtotal">
+                <div>
+                    <label for="invoiceDate">Invoice Date</label>
+                    <input type="date" id="invoiceDate" formControlName="invoiceDate">
+                </div>
+
+                <div formArrayName="items">
+                    <div *ngFor="let item of items.controls; let i = index" [formGroupName]="i">
+                        <label for="item">Item</label>
+                        <select formControlName="itemName">
+                            <option value="service1">Service 1</option>
+                            <option value="service2">Service 2</option>
+                        </select>
+
+                        <input type="number" formControlName="quantity" placeholder="Quantity"
+                            (input)="updateSubtotal()">
+                        <input type="number" formControlName="price" placeholder="Price" (input)="updateSubtotal()">
+
+                        <button type="button" (click)="removeItem(i)">Remove</button>
+                    </div>
+                </div>
+
+                <button type="button" (click)="addItem()">Add Item</button>
+
+                <div>
                     <label>Subtotal:</label>
-                    <span>0</span>
+                    <span>{{ invoiceForm.get('subtotal')?.value }}</span>
                 </div>
 
                 <button type="submit">Submit Invoice</button>

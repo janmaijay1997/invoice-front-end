@@ -13,7 +13,8 @@ import { AddInvoiceComponent } from './main/add-invoice/add-invoice.component';
 import { HeaderComponent } from './helper/sidebar/header/header.component';
 // import {TableModule} from 'primeng/table';
 
- 
+import { ReactiveFormsModule } from '@angular/forms';
+
 // import { SidebarModule } from 'primeng/sidebar';
 // import { ButtonModule } from 'primeng/button';
 // import { TreeModule } from 'primeng/tree';
@@ -33,6 +34,7 @@ import { HeaderComponent } from './helper/sidebar/header/header.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule
     // TableModule
     // SidebarModule,
     // TreeModule,

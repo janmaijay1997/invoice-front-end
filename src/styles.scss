@@ -30,22 +30,23 @@ h2 {
 form {
     display: flex;
     flex-direction: column;
-     
+
 }
+
 // flex-direction: row;
 
 //     button {
 //         margin-left: 10px;
 //     }
 
-.invoice_form{
-    
+.invoice_form {
+
     display: flex;
     flex-direction: row;
-    
-        button {
-            margin-left: 10px;
-        }
+
+    button {
+        margin-left: 10px;
+    }
 }
 
 form label {
@@ -392,4 +393,9 @@ body {
 
 mainPortion {
     // width: calc(100% - 300px) ;
+}
+
+.dashboardMain {
+    overflow: auto;
+    height: calc(100vh - 123px);
 }
