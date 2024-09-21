@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SidebarService } from 'src/app/services/sidebar.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { FormGroup, FormArray } from '@angular/forms';
 
 
 interface Currency {
@@ -82,13 +81,8 @@ export class AddInvoiceComponent implements OnInit {
         this.sidebarActive = true;
       }
     });
-
   }
-   users: any = [];
-  invoiceForm: any;
 
-
- 
   addItem() {
     this.items.push({
       vendorInvoiceRef: '',
