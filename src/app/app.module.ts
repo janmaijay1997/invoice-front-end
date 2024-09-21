@@ -11,10 +11,12 @@ import { SidebarComponent } from './helper/sidebar/sidebar.component';
 import { ViewInvoiceComponent } from './main/view-invoice/view-invoice.component';
 import { AddInvoiceComponent } from './main/add-invoice/add-invoice.component';
 import { HeaderComponent } from './helper/sidebar/header/header.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 // import {TableModule} from 'primeng/table';
 
-import { ReactiveFormsModule } from '@angular/forms';
-
+ 
 // import { SidebarModule } from 'primeng/sidebar';
 // import { ButtonModule } from 'primeng/button';
 // import { TreeModule } from 'primeng/tree';
@@ -34,7 +36,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    FormsModule,
+    HttpClientModule,
     // TableModule
     // SidebarModule,
     // TreeModule,
