@@ -1,0 +1,44 @@
+
+
+
+<div class="component_body">
+        <h1 class="component_title">Create Invoice</h1>
+        <div class="inner_body">
+                <form [formGroup]="invoiceForm" (ngSubmit)="onSubmit()" class="create_invoice_form">
+                        <div>
+                            <label for="client">Client Name</label>
+                            <input type="text" id="client" formControlName="client" placeholder="Enter client name">
+                        </div>
+        
+                        <div>
+                            <label for="invoiceDate">Invoice Date</label>
+                            <input type="date" id="invoiceDate" formControlName="invoiceDate">
+                        </div>
+        
+                        <div formArrayName="items">
+                            <div *ngFor="let item of items.controls; let i = index" [formGroupName]="i">
+                                <label for="item">Item</label>
+                                <select formControlName="itemName">
+                                    <option value="service1">Service 1</option>
+                                    <option value="service2">Service 2</option>
+                                </select>
+        
+                                <input type="number" formControlName="quantity" placeholder="Quantity"
+                                    (input)="updateSubtotal()">
+                                <input type="number" formControlName="price" placeholder="Price" (input)="updateSubtotal()">
+        
+                                <button type="button" (click)="removeItem(i)">Remove</button>
+                            </div>
+                        </div>
+        
+                        <button type="button" (click)="addItem()">Add Item</button>
+        
+                        <div>
+                            <label>Subtotal:</label>
+                            <span>{{ invoiceForm.get('subtotal')?.value }}</span>
+                        </div>
+        
+                        <button type="submit">Submit Invoice</button>
+                    </form>
+        </div>
+</div>

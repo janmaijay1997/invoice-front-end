@@ -33,7 +33,8 @@ export class AddInvoiceComponent implements OnInit {
       }
     });
 
-  } users: any = [];
+  }
+   users: any = [];
   invoiceForm: FormGroup;
 
 
